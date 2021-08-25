@@ -19,7 +19,7 @@ class YellowViewController: UIViewController {
     @IBAction func showTestAlert(_ sender: Any) {
         let alert = UIAlertController.init()
         alert.message = "Ihor U are right!"
-        let action = alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+       // let action = alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
         
         show(alert, sender: "Ihor U are right")
     }

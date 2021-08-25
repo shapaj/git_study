@@ -49,4 +49,9 @@ class Settings{
             }
         }
     }
+    
+    func resetSettings(){
+        self.curentSettings = defaultSettingsGame
+    }
+    
 }
