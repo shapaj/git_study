@@ -12,7 +12,14 @@ class GameViewController: UIViewController {
     @IBOutlet var gameButtons: [UIButton]!
     
     let player = CurentUser.shared
-    var newGame = GameModelIncease()
+    lazy
+      var newGame = GameModelIncease()
+      {
+         [weak self] (status, time) in
+          guard let self = self else {return}
+          self.timer.text = "\(Int(time))"
+          //self.labelCurentValue.text = "oh U lost ((((("
+      }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +54,7 @@ class GameViewController: UIViewController {
     }
     
     func startGame(){
-        newGame = GameModelIncease()
+       // newGame = GameModelIncease()
         newGame.restartGame(count: gameButtons.count)
         
         

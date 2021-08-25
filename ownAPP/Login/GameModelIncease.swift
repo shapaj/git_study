@@ -1,11 +1,5 @@
-//
-//  GameModelIncease.swift
-//  ownAPP
-//
-//  Created by Ihor Shovkoplias on 29.07.2021.
-//
 
-//import Foundation
+
 import UIKit
 
 let user = CurentUser.shared
@@ -30,7 +24,15 @@ struct PlayButton {
 }
 class GameModelIncease {
    
-    var timeForPlay:Int = Int(user.timeForPlay)
+    var timeForPlay:Int = Int(user.timeForPlay){
+        didSet{
+            updateTimer(gameStatus, timeForPlay)
+            if self.timeForPlay == 0{
+                gameStatus = .Lose
+               
+            }
+        }
+    }
     
     let numbers = Array(0...100)
     
@@ -49,20 +51,31 @@ class GameModelIncease {
     var playButtons:[PlayButton] = []
    
     private var timer:Timer?
+    private var updateTimer:((GameStatus, Int)->Void)
     
-    var gameStatus:GameStatus = .New
-    init() {
+    var gameStatus:GameStatus = .New{
+        didSet{
+            if self.gameStatus != .New && self.gameStatus != .Started{
+                stopGame()
+            }
+        }
+    }
+    init(_ updateTimer:@escaping (_ gameStatus:GameStatus,_ seconds:Int)->Void ) {
         
-        self.timer = Timer.init()
-    //timeFoPlay
-////        self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: T##Any, selector: T##Selector, userInfo: T##Any?, repeats: Bool)
+        //self.timer = Timer.init()
+        self.updateTimer = updateTimer
     }
     
     func restartGame(count:Int){
     
+        if Settings.shared.curentSettings.timerState{
+            self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self](_) in
+            self?.timeForPlay -= 1
+            
+            })
+        }
         //var correntNumber:Int
         self.gameStatus = .New
-        //self.timer? = TimeInterval(self.timeForPlay) //!!!tofix
         let allNumbers = self.numbers.shuffled()
         for index in 1...count{
             
@@ -89,11 +102,15 @@ class GameModelIncease {
         if self.correctNumbers.count == 0 {
             
             self.gameStatus = .Win
+        
         }
        
         return valueIsCorrect
         
     }
     
+    func stopGame() {
+        timer?.invalidate()
+    }
     
 }
