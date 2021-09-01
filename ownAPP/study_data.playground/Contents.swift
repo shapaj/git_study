@@ -1,4 +1,199 @@
-//import UIKit
+
+
+
+import UIKit
+var array11235:[Int] = []
+
+var value:Int = 0
+var curentValue:Int = 6
+for _ in 1...20{
+    
+    if let v:Int = array11235.last{
+        value = v
+    }
+    array11235.append(curentValue)
+    
+    curentValue = curentValue/2 * -1 + value
+    
+}
+print(array11235)
+
+var array136:[Int] = []
+value = 0
+curentValue = 6
+for _ in 1...20{
+    
+    if let v:Int = array136.last{
+        value = v
+    }
+    array136.append(curentValue)
+    
+    curentValue = curentValue/2 * -1 + value + 1
+    
+}
+print(array136)
+
+//getTwoMinValues(array11235: array11235)
+
+func getTwoMinValues(_ array:[Int]){
+   
+    //array11235 = array.shuffled()
+    
+    var vMin1:Int?
+    var vMin2:Int?
+   
+    for elem in array11235{
+        
+        //print("\(vMin1 ?? 42) ____ \(vMin2 ?? 42)")
+        guard vMin1 != nil else {
+            vMin1 = elem
+            continue}
+        
+        if let v:Int = vMin1{
+                if v > elem {
+                    vMin2 = v
+                    vMin1 = elem
+                    continue
+                }else if v == elem {
+                    continue
+                }
+                
+            }
+        
+        guard vMin2 != nil else {
+            vMin2 = elem
+            continue}
+        
+        if let v:Int = vMin2{
+            if v > elem{
+            vMin2 = elem
+        }
+        
+            
+        
+        }
+    }
+    //print("\(vMin1) ______ \(vMin2)")
+        //print("\(vMin1) ____ \(vMin2)")
+}
+
+    getTwoMinValues(array11235)
+    getTwoMinValues(array136)
+
+func mergeArrayes(_ array11235:[Int], _ array136:[Int])->[Int]{
+    
+    print(array11235)
+    print(array136)
+    
+    
+    var i11235 = 0
+    var i136 = 0
+    var result:[Int] = []
+    
+    while i136 < array136.count && i11235 < array11235.count {
+        
+        if i136 >= array136.count{
+            result.append(array11235[i11235])
+            i11235 += 1
+            continue
+        }
+        
+        if i11235 >= array11235.count{
+            result.append(array136[i136])
+            i11235 += 1
+            continue
+        }
+        
+        if array11235[i11235] > array136[i136]{
+            result.append(array136[i136])
+            i136 += 1
+        }else if array11235[i11235] == array136[i136]{
+            result.append(array11235[i11235])
+            result.append(array136[i136])
+            i136 += 1
+            i11235 += 1
+        }else{
+            result.append(array11235[i11235])
+            i11235 += 1
+        }
+    }
+    print(result)
+    return result
+}
+
+let arrayAll = mergeArrayes(array11235, array136)
+
+func differentValues1(_ array:[Int]){
+   
+    //let newArray = array.shuffled()
+    let newArray = array
+    
+    for elem in array{
+        if newArray.firstIndex(of: elem) == newArray.lastIndex(of: elem){
+            //print(elem)
+        }
+    }
+}
+
+differentValues1(arrayAll)
+
+func differentValues(_ array:[Int]){
+    print("ok")
+    let newArray = array.shuffled()
+    //let newArray = array
+    
+    var foundElems:[Int] = []
+    
+    for i in 0...newArray.count - 1 {
+       
+        var isFound = false
+        curentValue = newArray[i]
+        
+        if let _:Int = foundElems.firstIndex(of: curentValue){
+            continue
+        }
+        //print( "iii \(curentValue)")
+        var i2 = i
+        //print(i2)
+        while i2 < newArray.count - 1 {
+            i2 += 1
+            //print("i2 \(i2)")
+            if curentValue == newArray[i2]{
+                isFound = true
+                foundElems.append(curentValue)
+                //print("ff \(curentValue)")
+                break
+                
+            }
+            
+        }
+        
+        if !isFound{
+           
+            print(curentValue)
+            break
+        }
+    }
+ 
+    
+    
+}
+
+differentValues(arrayAll)
+
+print(arrayAll)
+var result:[Int] = []
+var negativeValues:Int = 0
+for elem in arrayAll{
+    if elem > 0{
+        result.append(elem)
+    }else{
+        result.insert(elem, at: negativeValues)
+        negativeValues += 1
+    }
+}
+print(result)
+
 //
 //var name = "pizza"
 //

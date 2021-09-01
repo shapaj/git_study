@@ -24,12 +24,16 @@ struct PlayButton {
 }
 class GameModelIncease {
    
-    var timeForPlay:Int = Int(user.timeForPlay){
+    let timeforGame = Settings.shared.curentSettings.timeforGame
+    var timeForPlay:Int = 0{
         didSet{
-            updateTimer(gameStatus, timeForPlay)
-            if self.timeForPlay == 0{
-                gameStatus = .Lose
-               
+            if Settings.shared.curentSettings.timerState{
+                
+                if self.timeForPlay == 0{
+                    gameStatus = .Lose
+                   
+                }
+                updateTimer(gameStatus, timeForPlay)
             }
         }
     }
@@ -48,6 +52,7 @@ class GameModelIncease {
     }
     var correctNumber:String = ""
     
+    var isNewRecord = false
     var playButtons:[PlayButton] = []
    
     private var timer:Timer?
@@ -55,6 +60,20 @@ class GameModelIncease {
     
     var gameStatus:GameStatus = .New{
         didSet{
+            if gameStatus == .Win{
+                let newRecordTime = self.timeforGame - self.timeForPlay
+                let curentRecord = UserDefaults.standard.integer(forKey: KeysUserDefaults.curentRecord)
+                
+                
+                if -1 * curentRecord > -1 * newRecordTime{
+                    self.isNewRecord = true
+                
+                UserDefaults.standard.setValue(newRecordTime, forKey: KeysUserDefaults.curentRecord)
+                UserDefaults.standard.setValue(user.userName, forKey: KeysUserDefaults.curentRecordsMen)
+              }
+                //UserDefaults.standard.setValue(record, forKey: "curentRecord")
+            }
+            
             if self.gameStatus != .New && self.gameStatus != .Started{
                 stopGame()
             }
@@ -62,21 +81,26 @@ class GameModelIncease {
     }
     init(_ updateTimer:@escaping (_ gameStatus:GameStatus,_ seconds:Int)->Void ) {
         
-        //self.timer = Timer.init()
+        self.timeForPlay = self.timeforGame
         self.updateTimer = updateTimer
     }
     
     func restartGame(count:Int){
-    
+        self.isNewRecord = false
+        
         if Settings.shared.curentSettings.timerState{
+            self.timeForPlay = self.timeforGame
             self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self](_) in
-            self?.timeForPlay -= 1
             
+                self?.timeForPlay -= 1
+                
             })
         }
         //var correntNumber:Int
         self.gameStatus = .New
         let allNumbers = self.numbers.shuffled()
+        self.playButtons = []
+        self.correctNumbers = []
         for index in 1...count{
             
             

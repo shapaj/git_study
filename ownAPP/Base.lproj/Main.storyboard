@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mCX-Ru-IYL">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -281,13 +282,13 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Mup-lP-euQ">
-                                <rect key="frame" x="20" y="288" width="388" height="404"/>
+                                <rect key="frame" x="20" y="288" width="388" height="372"/>
                                 <subviews>
                                     <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="wVR-Re-ese">
-                                        <rect key="frame" x="0.0" y="0.0" width="388" height="83"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="388" height="75"/>
                                         <subviews>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xo-Il-Vdc">
-                                                <rect key="frame" x="0.0" y="0.0" width="79" height="83"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="79" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.17254901960784313" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" id="6RQ-fY-eFm"/>
@@ -301,7 +302,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeR-K4-yOX">
-                                                <rect key="frame" x="103" y="0.0" width="79" height="83"/>
+                                                <rect key="frame" x="103" y="0.0" width="79" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.17254901960784313" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" id="Lra-Md-ydZ"/>
@@ -315,7 +316,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UeU-gz-cZT">
-                                                <rect key="frame" x="206" y="0.0" width="79" height="83"/>
+                                                <rect key="frame" x="206" y="0.0" width="79" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.17254901960784313" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" id="1O2-b2-4gW"/>
@@ -329,7 +330,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QzV-lk-OdX">
-                                                <rect key="frame" x="309" y="0.0" width="79" height="83"/>
+                                                <rect key="frame" x="309" y="0.0" width="79" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.17254901960784313" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" id="xtC-PR-leE"/>
@@ -345,10 +346,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="h8t-7k-Uru">
-                                        <rect key="frame" x="0.0" y="107" width="388" height="83"/>
+                                        <rect key="frame" x="0.0" y="99" width="388" height="75"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33z-94-Tni">
-                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="83"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.17254901960784313" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" id="lgT-Jt-6i9"/>
@@ -362,7 +363,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2M-9d-6aR">
-                                                <rect key="frame" x="102.66666666666669" y="0.0" width="80" height="83"/>
+                                                <rect key="frame" x="102.66666666666669" y="0.0" width="80" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.17254901960784313" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" id="rDZ-Mp-oc5"/>
@@ -376,7 +377,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izr-59-QNb">
-                                                <rect key="frame" x="205.66666666666666" y="0.0" width="79.666666666666657" height="83"/>
+                                                <rect key="frame" x="205.66666666666666" y="0.0" width="79.666666666666657" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.17254901960784313" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" id="ouV-6Q-rKg"/>
@@ -390,7 +391,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lw-g9-Edj">
-                                                <rect key="frame" x="308.33333333333331" y="0.0" width="79.666666666666686" height="83"/>
+                                                <rect key="frame" x="308.33333333333331" y="0.0" width="79.666666666666686" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.17254901960784313" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" id="liy-HM-1uh"/>
@@ -406,10 +407,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="Ucm-H2-xxm">
-                                        <rect key="frame" x="0.0" y="214" width="388" height="83"/>
+                                        <rect key="frame" x="0.0" y="198" width="388" height="75"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPE-g0-dax">
-                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="83"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="75"/>
                                                 <color key="backgroundColor" red="0.20222294330596924" green="0.17410802841186523" blue="0.048871412873268127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <state key="normal" title="0">
@@ -420,7 +421,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWw-0g-BZ5">
-                                                <rect key="frame" x="102.66666666666669" y="0.0" width="80" height="83"/>
+                                                <rect key="frame" x="102.66666666666669" y="0.0" width="80" height="75"/>
                                                 <color key="backgroundColor" red="0.20222294330596924" green="0.17410802841186523" blue="0.048871412873268127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <state key="normal" title="0">
@@ -431,7 +432,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVJ-93-8o9">
-                                                <rect key="frame" x="205.66666666666666" y="0.0" width="79.666666666666657" height="83"/>
+                                                <rect key="frame" x="205.66666666666666" y="0.0" width="79.666666666666657" height="75"/>
                                                 <color key="backgroundColor" red="0.2008507251739502" green="0.17386570572853088" blue="0.048949055373668671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <state key="normal" title="0">
@@ -442,7 +443,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPM-un-F7D">
-                                                <rect key="frame" x="308.33333333333331" y="0.0" width="79.666666666666686" height="83"/>
+                                                <rect key="frame" x="308.33333333333331" y="0.0" width="79.666666666666686" height="75"/>
                                                 <color key="backgroundColor" red="0.2008507251739502" green="0.17386570572853088" blue="0.048949055373668671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <state key="normal" title="0">
@@ -455,10 +456,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="WJd-QK-gyn">
-                                        <rect key="frame" x="0.0" y="321" width="388" height="83"/>
+                                        <rect key="frame" x="0.0" y="297" width="388" height="75"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxv-Yg-mm3">
-                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="83"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.17254901960784313" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <state key="normal" title="0">
@@ -469,7 +470,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xe0-pg-pHe">
-                                                <rect key="frame" x="102.66666666666669" y="0.0" width="80" height="83"/>
+                                                <rect key="frame" x="102.66666666666669" y="0.0" width="80" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.17254901960784313" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <state key="normal" title="0">
@@ -480,7 +481,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAt-Ld-ga7">
-                                                <rect key="frame" x="205.66666666666666" y="0.0" width="79.666666666666657" height="83"/>
+                                                <rect key="frame" x="205.66666666666666" y="0.0" width="79.666666666666657" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.17254901960784313" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <state key="normal" title="0">
@@ -491,7 +492,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBP-E2-KnO">
-                                                <rect key="frame" x="308.33333333333331" y="0.0" width="79.666666666666686" height="83"/>
+                                                <rect key="frame" x="308.33333333333331" y="0.0" width="79.666666666666686" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.17254901960784313" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <state key="normal" title="0">
@@ -506,7 +507,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qek-xI-pNl">
-                                <rect key="frame" x="179" y="752" width="70" height="70"/>
+                                <rect key="frame" x="179" y="720" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="iLW-9z-bii"/>
                                     <constraint firstAttribute="width" constant="70" id="rAm-0s-IdE"/>
@@ -626,7 +627,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Game" id="LFO-7C-Mq7">
+                            <tableViewSection headerTitle="Game" footerTitle="" id="LFO-7C-Mq7">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Timer" id="Gbm-Rh-zKY">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="43.666667938232422"/>
@@ -690,15 +691,26 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zLk-xr-pQG" id="P6P-Pi-1V4">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Nq8-K4-e6w">
+                                        <rect key="frame" x="0.0" y="155.33333778381348" width="428" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nq8-K4-e6w" id="Ytn-Gn-MSC">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwL-S4-cZu">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyf-r0-Qhu">
                                                     <rect key="frame" x="360" y="7" width="48" height="30"/>
                                                     <state key="normal" title="default"/>
+                                                    <connections>
+                                                        <action selector="setDefoultSettings:" destination="UMD-6m-ydT" eventType="touchUpInside" id="zIY-ll-6an"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="JwL-S4-cZu" secondAttribute="trailing" constant="20" symbolic="YES" id="QY6-VH-5zb"/>
-                                                <constraint firstItem="JwL-S4-cZu" firstAttribute="centerY" secondItem="P6P-Pi-1V4" secondAttribute="centerY" id="i0f-cZ-t4K"/>
+                                                <constraint firstAttribute="trailing" secondItem="cyf-r0-Qhu" secondAttribute="trailing" constant="20" symbolic="YES" id="D2g-Mc-gkz"/>
+                                                <constraint firstItem="cyf-r0-Qhu" firstAttribute="centerY" secondItem="Ytn-Gn-MSC" secondAttribute="centerY" id="bpl-xP-W3k"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -707,7 +719,7 @@
                             <tableViewSection headerTitle="Section-2" id="BnT-O2-yK3">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ttL-vA-GFA">
-                                        <rect key="frame" x="0.0" y="204.00000606883657" width="428" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="247.66667400706899" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ttL-vA-GFA" id="TgJ-yv-xcM">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
@@ -715,7 +727,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="53K-1N-O6s">
-                                        <rect key="frame" x="0.0" y="247.66667400706899" width="428" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="291.33334194530141" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="53K-1N-O6s" id="tD3-qo-HKz">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
@@ -723,7 +735,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gvb-lg-PaT">
-                                        <rect key="frame" x="0.0" y="291.33334194530141" width="428" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="335.00000988353383" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gvb-lg-PaT" id="gZC-6F-ojs">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
@@ -735,7 +747,7 @@
                             <tableViewSection headerTitle="Section-3" id="Ng2-C9-Qhq">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cBM-Be-gNW">
-                                        <rect key="frame" x="0.0" y="383.66667816855693" width="428" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="427.33334610678935" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cBM-Be-gNW" id="xRe-h9-4cC">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
@@ -743,7 +755,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HGY-fI-zq7">
-                                        <rect key="frame" x="0.0" y="427.33334610678935" width="428" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="471.00001404502177" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HGY-fI-zq7" id="9IZ-3E-bPA">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
@@ -751,7 +763,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CE1-l0-eLd">
-                                        <rect key="frame" x="0.0" y="471.00001404502177" width="428" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="514.66668198325419" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CE1-l0-eLd" id="hqC-2e-O0W">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
@@ -763,7 +775,7 @@
                             <tableViewSection headerTitle="Section-4" id="u7x-fY-zhH">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="nW0-tz-LLA">
-                                        <rect key="frame" x="0.0" y="563.33335026827729" width="428" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="607.00001820650971" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nW0-tz-LLA" id="SMB-CI-99j">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
@@ -771,7 +783,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ruz-p8-61q">
-                                        <rect key="frame" x="0.0" y="607.00001820650971" width="428" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="650.66668614474213" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ruz-p8-61q" id="DW2-i6-NRh">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
@@ -779,7 +791,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="lEd-Xq-jhE">
-                                        <rect key="frame" x="0.0" y="650.66668614474213" width="428" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="694.33335408297455" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lEd-Xq-jhE" id="vrT-Le-i12">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
@@ -798,6 +810,7 @@
                     <connections>
                         <outlet property="selectTime" destination="p2a-Tx-gA9" id="PFQ-OB-YGn"/>
                         <outlet property="settingsTable" destination="IMO-c4-B02" id="Wjv-mv-kH1"/>
+                        <outlet property="timerIsOn" destination="dNd-zI-4HS" id="ZB5-zh-sV6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPs-hx-w6R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

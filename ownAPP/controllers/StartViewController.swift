@@ -17,12 +17,15 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timeSlider.value = player.timeForPlay
+        
         
         
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        timeSlider.value = Float(Settings.shared.curentSettings.timeforGame)
+    }
     @IBAction func ChangeLogin(_ sender: UITextField) {
         
     }

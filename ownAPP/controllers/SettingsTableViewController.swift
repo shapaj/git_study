@@ -11,6 +11,8 @@ class SettingsTableViewController: UITableViewController {
 
     @IBOutlet var settingsTable: UITableView!
    
+    @IBOutlet weak var timerIsOn: UISwitch!
+    
     @IBOutlet weak var selectTime: UILabel!
    
     var settings = Settings.shared
@@ -22,7 +24,7 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         selectValue = Settings.shared.curentSettings.timeforGame
-        
+        timerIsOn.isOn = Settings.shared.curentSettings.timerState
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,6 +38,17 @@ class SettingsTableViewController: UITableViewController {
         }
     }
         
+    override func viewWillDisappear(_ animated: Bool) {
+        Settings.shared.curentSettings.timerState = timerIsOn.isOn
+    }
     
+    @IBAction func setDefoultSettings(_ sender: UIButton) {
         
+        settings.resetSettings(){
+            (timerState, timeforGame) in
+            self.timerIsOn.isOn = timerState
+            self.selectValue = timeforGame
+        }
+    }
+    
 }
