@@ -13,7 +13,7 @@ class CurentUser{
     
     var userName:String = "user"
     var password:String = "user"
-    var timeForPlay:Float = 50
+    var timeForPlay:Float = Float(Settings.shared.curentSettings.timeforGame)
     
     
     

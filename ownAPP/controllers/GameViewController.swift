@@ -17,6 +17,9 @@ class GameViewController: UIViewController {
       {
          [weak self] (status, time) in
           guard let self = self else {return}
+        if status == .Lose || status == .Win{
+            self.stopGame()
+        }
           self.timer.text = "\(Int(time))"
           //self.labelCurentValue.text = "oh U lost ((((("
       }
@@ -24,9 +27,14 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        newGame.timeForPlay = Int(player.timeForPlay)
+        
+        newGame.timeForPlay = Settings.shared.curentSettings.timeforGame
         labelUser.text = player.userName
-        timer.text = "\(Int(player.timeForPlay))"
+        if Settings.shared.curentSettings.timerState{
+            timer.text = "\(Int(newGame.timeForPlay))"
+        }else{
+            timer.text = ""
+        }
         labelCurentValue.text = "CurentValue"
         
         startGame()
@@ -49,11 +57,12 @@ class GameViewController: UIViewController {
             labelCurentValue.text = "find number \(newGame.correctNumber)"
         
         if newGame.gameStatus == .Win{
-            victory()
+            stopGame()
         }
     }
     
     func startGame(){
+        newGame.stopGame()
        // newGame = GameModelIncease()
         newGame.restartGame(count: gameButtons.count)
         
@@ -68,11 +77,47 @@ class GameViewController: UIViewController {
         
     }
     
-    func victory() {
+    func updateInfoGame(){
     
-        labelCurentValue.text = "UIIIIIIII!!!! U win!!!!"
+        
+    }
+    
+    func stopGame() {
+    
+        switch newGame.gameStatus {
+        case .Lose:
+            labelCurentValue.text = "oh U lost!!!"
+            newGame.stopGame()
+        case .Win:
+            labelCurentValue.text = "UIIIIIIII!!!! U win!!!!"
+            newGame.stopGame()
+            if newGame.isNewRecord{
+                showAlert()
+            }else{
+                showAlertActionSheet()
+            }
+        default:
+            break
+        }
+        self.timer.text = ""
         
         
+    }
+    
+    func showAlert(){
+        let alert = UIAlertController(title: "huyase new record!!!", message: "U are bestel the best", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+    func showAlertActionSheet(){
+//
+//        let alert = UIAlertController(title: "huyase new record!!!", message: "U are bestel the best", preferredStyle: .alert)
+//        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+//
+//        alert.addAction(newGameAction )
+//        present(alert, animated: true, completion: nil)
     }
 }
 

@@ -10,8 +10,10 @@ import Foundation
 //struct SettingsGame:Decodable, Encodable {||
 //Codable is super protocol for Decodable, Encodable
 
-enum KeysUserFefaults{
+enum KeysUserDefaults{
    static let settingsGame = "SettingsGame"
+    static let curentRecord = "curentRecord"
+    static let curentRecordsMen = "curentRecordsMen"
 }
 
 struct SettingsGame: Codable {
@@ -24,10 +26,10 @@ class Settings{
     
     static var shared = Settings()
     let defaultSettingsGame = SettingsGame(timerState: true, timeforGame: 30)
-    
+     
     var curentSettings:SettingsGame{
         get{
-            if let data = UserDefaults.standard.object(forKey: KeysUserFefaults.settingsGame) as? Data{
+            if let data = UserDefaults.standard.object(forKey: KeysUserDefaults.settingsGame) as? Data{
                 if let settings =  try? PropertyListDecoder().decode(SettingsGame.self, from: data)
                 {
                     return settings
@@ -43,15 +45,16 @@ class Settings{
         set{
             do{
                 let data =  try PropertyListEncoder().encode(newValue)
-                UserDefaults.standard.setValue(data, forKey: KeysUserFefaults.settingsGame)
+                UserDefaults.standard.setValue(data, forKey: KeysUserDefaults.settingsGame)
             }catch{
                 print(error)
             }
         }
     }
     
-    func resetSettings(){
+    func resetSettings(_ onReset: (_ timerState:Bool, _ timeforGame: Int)->Void){
         self.curentSettings = defaultSettingsGame
+        onReset(self.curentSettings.timerState, self.curentSettings.timeforGame)
     }
     
 }
